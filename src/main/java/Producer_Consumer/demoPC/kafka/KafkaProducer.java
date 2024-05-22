@@ -24,8 +24,7 @@ public class KafkaProducer {
                             (result, ex) -> {
                                 if (ex == null) {
                                     log.info(
-                                            "message user was sent, offset:{}", myUser.getId(),
-                                            result.getRecordMetadata().offset());
+                                            "[ALFA] message user was sent, message: {}", myUser.getMessage());
                                 } else {
                                     log.error("message user was not sent, offset:{}", myUser.getId(), ex);
                                 }
